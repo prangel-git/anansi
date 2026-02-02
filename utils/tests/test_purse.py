@@ -77,7 +77,7 @@ def test_a_few_pair_encodings():
     string_stream = "Peter Piper picked a peck of pickled peppers"
     my_purse = Purse()
 
-    for _ in range(5):
+    for _ in range(6):
         token_string = my_purse.str_to_tokens(string_stream)
         my_purse.token_pairing(token_string)
 
@@ -93,21 +93,18 @@ def test_a_few_pair_encodings():
         "i",
         "per",
         " ",
-        "pi",
-        "ck",
+        "pick",
         "ed",
         " ",
         "a",
         " ",
-        "p",
-        "e",
+        "pe",
         "ck",
         " ",
         "o",
         "f",
         " ",
-        "pi",
-        "ck",
+        "pick",
         "l",
         "ed",
         " ",

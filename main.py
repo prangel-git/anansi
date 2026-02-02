@@ -8,7 +8,7 @@ def main():
     string_stream = "Peter Piper picked a peck of pickled peppers"
     my_purse = Purse()
 
-    for _ in range(5):
+    for _ in range(6):
         token_string = my_purse.str_to_tokens(string_stream)
         my_purse.token_pairing(token_string)
 

@@ -32,15 +32,13 @@ class Purse:
         if not word:
             return []
         else:
-            token = word[0]
-            rest_of_string = word[1:]
-            for k in range(1, len(word) + 1):
-                if not self.is_token(word[:k]):
-                    break
+            for k in range(len(word), 0, -1):
                 token = word[:k]
                 rest_of_string = word[k:]
+                if self.is_token(word[:k]):
+                    return [token] + self.word_to_tokens(rest_of_string)
 
-        return [token] + self.word_to_tokens(rest_of_string)
+        return [word[0]] + self.word_to_tokens(word[1:])
 
     def str_to_tokens(self, string):
         tokens = []
