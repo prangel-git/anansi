@@ -10,7 +10,7 @@ class Purse:
 
     def token_pairing(self, token_stream):
         counts = self.count_token_pairings(token_stream)
-        max_count = max(counts, key=counts.get)
+        max_count = max(counts, key=counts.get)  # type: ignore
         self.add_token(max_count)
 
     def count_token_pairings(self, token_stream: list[str]) -> dict[str, int]:
